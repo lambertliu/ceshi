@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.analyze.mapper.DescMapper">
+<select id="selectPosition" parameterType="java.lang.String" resultType="java.lang.Integer">
+select count(*) from it_desc b,it_cat a where b.posit_desc like concat('%',#{position},'%') and b.pid=7 
+</select>
+
+<select id="selectWelfare" parameterType="java.lang.String" resultType="java.lang.Integer">
+select count(*) from it_desc b,it_cat a where b.welfare like concat('%',#{wel},'%') and b.pid=7
+</select>
+
+</mapper>

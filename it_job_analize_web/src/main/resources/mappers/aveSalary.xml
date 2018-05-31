@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.analyze.mapper.PriceMapper">
+<select id="selectAveSalary" resultType="java.util.Map" >
+select a.type_name,round(avg((b.max_salary+b.min_salary)/2)) salary from it_position b,it_cat a where a.id=b.pid group by a.type_name
+</select>
+<select id="selectaveSalaryPosition" resultType="java.util.Map" parameterType="java.lang.String">
+select b.city,round(avg((b.max_salary+b.min_salary)/2)) salary from it_position b,it_cat a where a.type_name=#{position} and a.id=b.pid group by b.city 
+</select>
+ 
+
+ 
+ 
+</mapper>

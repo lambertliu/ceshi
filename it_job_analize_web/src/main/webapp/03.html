@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>平均薪资</title>
+<!-- 引入 echarts.custom.min.js -->
+<link
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="icon"
+	href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="https://img.hcharts.cn/highcharts/highcharts-3d.js"></script>
+<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+<script
+	src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+<script src="jquery3.3.1.min.js"></script>
+<style>
+body {
+	width: 100%;
+	background-image: url("t4.jpg");
+	background-position: center;
+	opacity: inherit;
+	background-size: 100% padding: 15px;
+	background-attachment: fixed;
+}
+
+#o {
+	width: 100%;
+	background-color: white;
+	background-position: center;
+	opacity: inherit;
+	background-size: 100% padding: 15px;
+}
+
+#oo {
+	width: 100%;
+	background-color: white;
+	background-position: center;
+	opacity: inherit;
+	background-size: 100% padding: 15px;
+}
+</style>
+</head>
+<body>
+	<div align="center">
+		<font color="#483D8B" face="华文行楷" size="6">职位学历工作经验对应薪资</font>
+	</div>
+	
+		<div id="zhiwei" class="row clearfix" align="center">
+			<br /> <br /> <span>&nbsp &nbsp&nbsp&nbsp<font color="#483D8B" face="华文行楷" size="5">职位</font></span>
+			<select>
+				<option value="测试工程师">测试工程师</option>
+				<option value="系统架构师 ">系统架构师</option>
+				<option value="产品经理">产品经理</option>
+				<option value="数据分析师">数据分析师</option>
+				<option value="网络工程师">网络工程师</option>
+				<option value="网站运营">网站运营</option>
+				<option value="大数据开发工程师">大数据开发工程师</option>
+				<option value="云计算工程师">云计算工程师</option>
+				<option value="运维工程师">运维工程师</option>
+				<option value="网站推广专员">网站推广专员</option>
+				<option value="AI人工智能\算法工程师">AI人工智能\算法工程师</option>
+				<option value="手机APP开发工程师">手机APP开发工程师</option>
+				<option value="UI设计">UI设计</option>
+				<option value="WEB前端工程师">WEB前端工程师</option>
+				<option value="游戏设计\开发工程师">游戏设计\开发工程师</option>
+				<option value="数据工程师">数据工程师</option>
+				<option value="golang开发工程师">golang开发工程师</option>
+				<option value="ERP工程师">ERP工程师</option>
+				<option value="PHP工程师">PHP工程师</option>
+				<option value="Python工程师">Python工程师</option>
+				<option value="C#工程师">C#工程师</option>
+				<option value=".net工程师">.net工程师</option>
+				<option value="Linux工程师">Linux工程师</option>
+				<option value="C++\c工程师">C++\c工程师</option>
+				<option value="java工程师" selected>java工程师</option>
+			</select> <span>&nbsp &nbsp&nbsp&nbsp<font color="#483D8B" face="华文行楷" size="5">工作年限</font></span> <select>
+				<option value="1" selected>不限</option>
+				<option value="2">无经验</option>
+				<option value="3">3年以下</option>
+<!-- 				<option value="4">1-2年</option> -->
+				<option value="5">3-5年</option>
+				<option value="6">5年以上</option>
+<!-- 				<option value="7">10年以上</option> -->
+
+			</select> <span>&nbsp &nbsp&nbsp&nbsp<font color="#483D8B" face="华文行楷" size="5">学历</font></span> <select>
+<!-- 				<option value="不限" selected>不限</option> -->
+				<option value="中专">中专</option>
+				<option value="大专">大专</option>
+				<option value="本科" selected>本科</option>
+				<option value="硕士">研究生</option>
+				<option value="博士">博士</option>
+<!-- 				<option value="其他">其他</option> -->
+
+			</select> <br /> <br />
+			<div id="o" class="col-md-12 column">
+				<div id="tu1" style="width:90%;height:600px"></div>
+			</div>
+		</div>
+		<br /> <br />
+	<script type="text/javascript" src="tu4.js"></script>
+
+</body>
+</html>

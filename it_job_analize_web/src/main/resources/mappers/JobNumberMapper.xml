@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.analyze.mapper.JobNumberMapper">
+
+<select id="getNumberForCity" resultType="java.util.Map" >
+select  a.type_name,b.city,sum(b.num) num from it_position b,it_cat a where a.id=b.pid  group by a.type_name,b.city
+</select>
+<select id="typeQuery" resultType="java.lang.String" >
+select  type_name from it_cat
+</select>
+<select id="Cquery"  parameterType="java.lang.String" resultType="it.analyze.pojo.Test" >
+<!-- 根据所在城市 和 相应技能 查询出num-->
+<!-- select sum(b.num) num from it_position b,it_cat a where b.city like concat('%',#{arg0},'%') and b.pid=(SELECT -->
+<!-- 	id -->
+<!-- FROM -->
+<!-- 	it_cat -->
+<!-- WHERE -->
+<!-- 	type_name = #{arg1} limit 1) -->
+select b.city ,sum(b.num) num from it_position b,it_cat a where a.type_name=#{pos} and b.pid=a.id group by a.type_name,b.city
+
+</select>
+
+</mapper>

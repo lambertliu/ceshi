@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>平均薪资</title>
+<!-- 引入 echarts.custom.min.js -->
+<link rel="icon"
+	href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+<script src="https://img.hcharts.cn/highcharts/modules/oldie.js"></script>
+<script
+	src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+<script src="https://img.hcharts.cn/highcharts/modules/wordcloud.js"></script>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<link
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script
+	src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="echarts.js"></script>
+<link rel="icon" href="https://static.jianshukeji.com/highcharts/images/favicon.ico">
+<script src="jquery3.3.1.min.js"></script>
+<style>
+body {
+	width: 100%;
+	background-position: center;
+	
+	background-size: 100% padding: 15px;
+	background-attachment: fixed;
+}
+</style>
+</head>
+<body>
+	<div id="tu1" style="width: 1520px; height:400px;"></div>
+	<div id="qw" class="container">
+		<div class="row clearfix">
+			<font  color="#483D8B" face="微软雅黑" size="5.5">选择职位可查看具体信息</font> <select id="select"  >
+				<option value="测试工程师">测试工程师</option>
+				<option value="系统架构师 ">系统架构师</option>
+				<option value="产品经理">产品经理</option>
+				<option value="数据分析师">数据分析师</option>
+				<option value="网络工程师">网络工程师</option>
+				<option value="网站运营">网站运营</option>
+				<option value="大数据开发工程师">大数据开发工程师</option>
+				<option value="云计算工程师">云计算工程师</option>
+				<option value="运维工程师">运维工程师</option>
+				<option value="网站推广专员">网站推广专员</option>
+				<option value="AI人工智能\算法工程师">AI人工智能\算法工程师</option>
+				<option value="手机APP开发工程师">手机APP开发工程师</option>
+				<option value="UI设计">UI设计</option>
+				<option value="WEB前端工程师">WEB前端工程师</option>
+				<option value="游戏设计\开发工程师">游戏设计\开发工程师</option>
+<!-- 				<option value="数据工程师">数据工程师</option> -->
+				<option value="golang开发工程师">golang开发工程师</option>
+				<option value="ERP工程师">ERP工程师</option>
+				<option value="PHP工程师">PHP工程师</option>
+				<option value="Python工程师">Python工程师</option>
+				<option value="C#工程师">C#工程师</option>
+				<option value=".net工程师">.net工程师</option>
+				<option value="Linux工程师">Linux工程师</option>
+				<option value="C++\c工程师">C++\c工程师</option>
+				<option value="java工程师"  selected>java工程师</option>
+			</select> <br />
+			<div id="oo" class="col-md-12 column"></div>
+		</div>
+		<div id="tu2" style="   height: 400px"></div>
+	</div>
+	<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+	<script src="tu1.js"></script>
+</body>
+</html>

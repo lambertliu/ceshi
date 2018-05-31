@@ -1,0 +1,27 @@
+<!DOCTYPE   HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<style>
+html {
+	background-image: url('1111.jpg');
+	filter:
+		"progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+#food {
+	height: 400px;
+	overflow: hidden;
+}
+</style>
+<frameset rows="15%,80%,5%" frameborder="0" onresize="onresize">
+	<frame src="head.html">
+	<frameset cols="15%,85%">
+		<frame src="dhy.html" />
+		<frame src="map.html" name="show" />
+	</frameset>
+	<frame id="food" src="food.html" />
+</frameset>
+</html>

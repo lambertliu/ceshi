@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="it.analyze.mapper.PCMapper">
+<select id="eduQuery" parameterType="java.lang.String" resultType="java.lang.Integer">
+select count(*) from it_position where edu like concat('%',#{education},'%') and pid=7
+</select>
+
+<select id="CNQuery" parameterType="java.lang.String" resultType="java.lang.Integer">
+select sum(num) from it_position where city=#{city}
+</select>
+
+<select id="QueryUrl"  resultType="it.analyze.pojo.UrlPo">
+select position_name,company,FLOOR((min_salary+max_salary)/2) salary,creat_time date,uuid url from it_position where pid=#{arg0} and city=#{arg1}  
+</select>
+
+
+
+</mapper>
